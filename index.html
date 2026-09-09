@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEGO TRAP | Official Streetwear Store</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link CSS Externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Bar de Avisos / Promoção -->
+    <div class="top-bar">
+        ⚡ DROPS EXCLUSIVOS & FRETE GRÁTIS ACIMA DE R$ 299 | CUPOM TRAP10 ⚡
+    </div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <a href="#" class="logo">NEGO<span>TRAP</span></a>
+        
+        <nav>
+            <ul>
+                <li><a href="#produtos">Lançamentos</a></li>
+                <li><a href="#marcas">Marcas</a></li>
+                <li><a href="#produtos">Oversized</a></li>
+                <li><a href="#produtos">Acessórios</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-icons">
+            <div class="icon-btn"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="icon-btn"><i class="fa-regular fa-user"></i></div>
+            <div class="cart-icon-wrap" id="cartBtn">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">EDITION 2026 // DROP URBAN</span>
+            <h1>VIVA O SWAG.<br><span>SINTA O TRAP.</span></h1>
+            <p>O epicentro da cultura streetwear urbana. As melhores marcas gringas e a essência nacional reunidas no mesmo drip.</p>
+            <button class="btn-primary" onclick="scrollToProducts()">GARANTIR SEU DROP</button>
+        </div>
+    </section>
+
+    <!-- Seção de Seleção de Marcas -->
+    <section class="brands-section" id="marcas">
+        <h2 class="section-title">MARCAS DA CENA</h2>
+        <div class="brands-grid">
+            <button class="brand-item active" data-brand="all">TODAS</button>
+            <button class="brand-item" data-brand="NEGO TRAP">NEGO TRAP LAB</button>
+            <button class="brand-item" data-brand="TRAPSTAR">TRAPSTAR</button>
+            <button class="brand-item" data-brand="OFF-WHITE">OFF-WHITE</button>
+            <button class="brand-item" data-brand="CORTEIZ">CORTEIZ</button>
+            <button class="brand-item" data-brand="BAPE">BAPE</button>
+        </div>
+    </section>
+
+    <!-- Vitrine de Produtos -->
+    <section class="products-section" id="produtos">
+        <!-- Filtros por Categoria -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">TODOS OS ITENS</button>
+            <button class="filter-btn" data-category="camisetas">CAMISETAS OVERSIZED</button>
+            <button class="filter-btn" data-category="hoodies">HOODIES & MOLETOMS</button>
+            <button class="filter-btn" data-category="calcas">CALÇAS CARGO</button>
+            <button class="filter-btn" data-category="acessorios">JOIAS & ACESSÓRIOS</button>
+        </div>
+
+        <!-- Grid de Produtos Renderizado pelo JS -->
+        <div class="grid-products" id="productGrid"></div>
+    </section>
+
+    <!-- Banner Lifestyle / Manifesta -->
+    <section class="vibe-banner">
+        <h2>DROPS LIMITADOS</h2>
+        <p>Não entregamos apenas roupas, entregamos conceito e identidade. Produção limitada com estética hypebeast.</p>
+        <button class="btn-primary">VER AVISO DE NOVOS DROPS</button>
+    </section>
+
+    <!-- Carrinho Lateral (Drawer / Slide) -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>MEU DROP (<span id="cartCountHeader">0</span>)</h3>
+            <button class="close-cart" id="closeCartBtn">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Itens do carrinho aparecem aqui -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>TOTAL:</span>
+                <span id="cartTotalValue">R$ 0,00</span>
+            </div>
+            <button class="btn-checkout" onclick="alert('Redirecionando para o Checkout de Exemplo!')">FINALIZAR COMPRA</button>
+        </div>
+    </aside>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>NEGO TRAP STORE</h4>
+                <p>Referência máxima em streetwear, drip e cultura urbana. Conectando as ruas ao hype internacional.</p>
+            </div>
+            <div class="footer-col">
+                <h4>NAVEGAÇÃO</h4>
+                <ul>
+                    <li><a href="#">Lançamentos</a></li>
+                    <li><a href="#">Marcas Parceiras</a></li>
+                    <li><a href="#">Lookbook 2026</a></li>
+                    <li><a href="#">Tabela de Medidas</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>SUPORTE</h4>
+                <ul>
+                    <li><a href="#">Atendimento WhatsApp</a></li>
+                    <li><a href="#">Política de Trocas</a></li>
+                    <li><a href="#">Rastreio de Pedidos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>REDES SOCIAIS</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NEGO TRAP STORE — Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Link JS Externo -->
+    <script src="script.js"></script>
+</body>
+</html>
